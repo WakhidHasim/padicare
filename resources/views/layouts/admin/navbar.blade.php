@@ -45,7 +45,7 @@
                                     <div class="u-text">
                                         <h4>Admin</h4>
                                         <p class="text-muted">admin@gmail.com</p>
-                                        <form action="" method="POST">
+                                        <form action="{{ route('logout') }}" method="POST">
                                             @csrf
                                             <button type="submit" class="btn btn-xs btn-danger btn-sm">Logout</button>
                                         </form>

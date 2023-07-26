@@ -16,6 +16,7 @@
                     <a class="{{ request()->is('teams') ? 'active' : '' }}" href="{{ route('team') }}">Anggota
                         Kelompok</a>
                 </li>
+                <li><a href="{{ route('login') }}" class="btn-login">Login</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
