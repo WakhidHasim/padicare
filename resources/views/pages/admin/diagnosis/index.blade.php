@@ -28,39 +28,33 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Tanggal</th>
                                             <th>Nama Petani</th>
+                                            <th>No Handphone</th>
                                             <th>Alamat Petani</th>
                                             <th>Nama Penyakit</th>
                                             <th>Presentase</th>
-                                            <th style="width: 10%">Aksi</th>
+                                            {{-- <th style="width: 10%">Aksi</th> --}}
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($diagnoses as $diagnosis)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
+                                                <td>{{ date_format($diagnosis->created_at, 'd-m-Y') }}</td>
                                                 <td>{{ $diagnosis->farmer_name }}</td>
+                                                <td>{{ $diagnosis->phone_number }}</td>
                                                 <td>{{ $diagnosis->address }}</td>
                                                 <td>{{ $diagnosis->disease->disease_name }}</td>
-                                                <td>{{ $diagnosis->presentase }}</td>
-                                                <td>
+                                                <td>{{ $diagnosis->presentase * 100 }}%</td>
+                                                {{-- <td>
                                                     <div class="form-button-action">
-                                                        <a href="{{ route('diagnoses.edit', $diagnosis->id) }}"
-                                                            class="btn btn-link btn-primary btn-lg">
-                                                            <i class="fa fa-edit"></i>
+                                                        <a href="{{ route('diagnoses.show', $diagnosis->id) }}"
+                                                            class="btn btn-link btn-success btn-lg">
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
-                                                        <form method="POST"
-                                                            action="{{ route('diagnoses.destroy', $diagnosis->id) }}">
-                                                            @csrf
-                                                            <input name="_method" type="hidden" value="DELETE">
-                                                            <button type="submit"
-                                                                class="btn btn-link btn-danger show_confirm"
-                                                                data-toggle="tooltip" title='Delete'>
-                                                                <i class="fa fa-trash"></i>
-                                                            </button>
-                                                        </form>
                                                     </div>
-                                                </td>
+                                                </td> --}}
                                             </tr>
                                         @endforeach
                                     </tbody>

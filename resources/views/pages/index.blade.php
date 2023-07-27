@@ -6,7 +6,7 @@
         <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
             <h1>PadiCare</h1>
             <h2>Sistem Pakar Diagnosa Penyakit Atau Hama Pada Tanaman Padi.</h2>
-            <a href="courses.html" class="btn-get-started">Mulai Diagnosa</a>
+            <a href="{{ route('biodata.index') }}" class="btn-get-started">Mulai Diagnosa</a>
         </div>
     </section>
     <!-- End Hero -->

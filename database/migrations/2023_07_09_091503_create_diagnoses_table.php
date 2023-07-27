@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('diagnoses', function (Blueprint $table) {
             $table->id();
             $table->string('farmer_name', 100);
+            $table->string('phone_number', 13);
             $table->longText('address');
             $table->char('disease_id', 4);
             $table->float('presentase');

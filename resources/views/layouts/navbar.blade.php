@@ -9,8 +9,8 @@
                     <a class="{{ request()->is('/') ? 'active' : '' }}" href="{{ route('home') }}">Beranda</a>
                 </li>
                 <li>
-                    <a class="{{ request()->is('diagnosis') ? 'active' : '' }}"
-                        href="{{ route('diagnosis.index') }}">Diagnosa</a>
+                    <a class="{{ request()->is('biodata') || request()->is('diagnosis*') ? 'active' : '' }}"
+                        href="{{ route('biodata.index') }}">Diagnosa</a>
                 </li>
                 <li>
                     <a class="{{ request()->is('teams') ? 'active' : '' }}" href="{{ route('team') }}">Anggota
